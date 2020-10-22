@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="window__wrapper">
+      <h2 class="window__title">Покупка</h2>
+      <div class="window">
+        <div class="inp__wrapper">
+          <div class="price__wrapper">
+            <label for="inp-1">Цена</label>
+            <input type="text" id="inp-1" class="price-inp">
+          </div>
+          <div class="quantity-wrapper">
+            <label for="inp-2">Количество</label>
+            <input type="text" id="inp-2" class="quantity-inp">
+          </div>
+        </div>
+        <div class="btn__wrapper">
+          <button class="payment">Расчёт</button>
+          <button class="complete">Завершить</button>
+        </div>
+        <div class="out-wrapper">
+          <p class="price-output"></p>
+          <p class="quantity-output"></p>
+          <p class="sum-output"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
