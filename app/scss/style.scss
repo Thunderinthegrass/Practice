@@ -14,6 +14,7 @@
 }
 body{
   font-family: "Fira Sans", sans-serif;
+  color: #363636;
 }
 .container{
   width: 100%;
@@ -25,11 +26,11 @@ body{
 .window__wrapper{
   width: 500px;
   height: 300px;
-  background: #A4C8E5;
+  background: #ddec53;
   border: 1px solid #212121;
   border-radius: 3px;
 }
-.window__title{
+.title{
   padding: 6px 10px;
   font-size: 16px;
 }
@@ -52,5 +53,51 @@ body{
   background: rgb(135, 231, 199);
   position: relative;
   padding: 10px 70px 10px;
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  width: 100px;
+  padding: 5px 0;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: .4s;
+  outline: none;
+  border: 1px solid #70a0a8;
+  background: rgb(255, 255, 255);
+  cursor: pointer;
+  &:hover{
+    background: rgb(18, 228, 217);
+    color: #ffffff;
+  }
+  &:active{
+    background: rgb(224, 11, 11);
+  }
+}
+.out__wrapper{
+  background: rgb(110, 117, 143);
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.out__item{
+  width: 300px;
+  text-align: right;
+  position: relative;
+}
+span{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.out{
+  background: rgb(194, 112, 226);
+  height: 30px;
+  width: 200px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
