@@ -1,11 +1,34 @@
 let inp = document.querySelectorAll('input');
 let p = document.querySelectorAll('p');
 
-let payment = document.querySelector('.payment').onclick = function() {
-  for (let k = 0; k < inp.length; k++) {
-    let a = inp[0].value;
+let complete = document.querySelector('.complete').onclick = function end() {
+  inp[0].value = '';
+  inp[1].value = '';
+  for (let k = 0; k < p.length; k++) {
+    p[k].innerHTML = '';
+  }
+}
+
+let payment = document.querySelector('.payment').onclick = function () {
+  let a = inp[0].value;
+  let b = inp[1].value;
+
+  
+  // if (a.value = "(/\d.d)") {
+  //   alert('Используйте запятую вместо точки');
+  // }
+  
+  if (a == '' && b == '') {
+    alert('Введите цену и количество');
+  }
+  else if (a != '' && b == '') {
+    alert('Введите количество');
+  }
+  else if (a == '' && b != '') {
+    alert('Введите цену');
+  }
+  else {
     a = parseFloat(a.replace(/\s/g, "").replace(",", "."));
-    let b = inp[1].value;
     b = parseFloat(b.replace(/\s/g, "").replace(",", "."));
     let c = a * b;
     p[0].innerHTML = a;
@@ -14,10 +37,3 @@ let payment = document.querySelector('.payment').onclick = function() {
   }
 }
 
-let complete = document.querySelector('.complete').onclick = function() {
-  for (let k = 0; k < p.length; k++) {
-    inp[0].value = '';
-    inp[1].value = '';
-    p[k].innerHTML = '';
-  }
-}
