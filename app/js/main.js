@@ -14,7 +14,7 @@ let payment = document.querySelector('.payment').onclick = function () {
   let b = inp[1].value;
 
   
-  // if (a.value = "(/\d.d)") {
+  // if (a.value == 8) {
   //   alert('Используйте запятую вместо точки');
   // }
   
@@ -31,6 +31,17 @@ let payment = document.querySelector('.payment').onclick = function () {
     a = parseFloat(a.replace(/\s/g, "").replace(",", "."));
     b = parseFloat(b.replace(/\s/g, "").replace(",", "."));
     let c = a * b;
+    c = Math.floor(c * 100) / 100;
+
+    a = String(a);
+    a = a.replace(".",",");
+
+    b = String(b);
+    b = b.replace(".",",");
+
+    c = String(c);
+    c = c.replace(".",",");
+
     p[0].innerHTML = a;
     p[1].innerHTML = b;
     p[2].innerHTML = c;

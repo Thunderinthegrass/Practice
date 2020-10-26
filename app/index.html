@@ -16,11 +16,12 @@
         <div class="inp__wrapper">
           <div class="price__wrapper">
             <label for="inp-1">Цена</label>
+            <input type="text" id="inp-1" class="price-inp">
             <input type="text" id="inp-1" class="price-inp" oninput="this.value = this.value.replace(/\./g, ',')">
           </div>
           <div class="quantity-wrapper">
             <label for="inp-2">Количество</label>
-            <input type="text" id="inp-2" class="quantity-inp">
+            <input type="text" id="inp-2" class="quantity-inp" oninput="this.value = this.value.replace(/\./g, ',')">
           </div>
         </div>
         <div class="btn__wrapper">
