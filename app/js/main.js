@@ -1,3 +1,4 @@
+// l.1-2----------------------------------------------------
 let inp = document.querySelectorAll('input');
 let p = document.querySelectorAll('p');
 
@@ -46,5 +47,34 @@ let payment = document.querySelector('.payment').onclick = function () {
     p[1].innerHTML = b;
     p[2].innerHTML = c;
   }
+}
+
+
+// l-3------------------------------------------------------
+window.onload = function() {
+  let game = document.querySelector('.game');
+
+  for (let k = 0; k < 9; k++) {
+    game.innerHTML += '<div class="block"></div>';
+  }
+
+  let move = 0;
+
+  game.onclick = function(event) {
+    console.log(event);
+    if (event.target.className == 'block') {
+      if (move % 2 == 0) {
+        event.target.innerHTML = 'o';
+      }
+      else {
+        event.target.innerHTML = 'x';
+      }
+      move++;
+      checkWin();
+    }
+  }
+
+  
+
 }
 

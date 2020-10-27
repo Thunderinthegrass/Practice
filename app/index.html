@@ -10,31 +10,52 @@
 
 <body>
   <div class="container">
-    <div class="window__wrapper">
-      <h2 class="title">Покупка</h2>
-      <div class="window">
-        <div class="inp__wrapper">
-          <div class="price__wrapper">
-            <label for="inp-1">Цена</label>
-            <input type="text" id="inp-1" class="price-inp">
-            <input type="text" id="inp-1" class="price-inp" oninput="this.value = this.value.replace(/\./g, ',')">
+    <nav class="menu">
+      <div class="menu__inner">
+        <a href="#" class="menu__item">Лабораторные работы 1-2</a>
+        <a href="#" class="menu__item">Лабораторная работа 3</a>
+        <a href="#" class="menu__item">Лабораторная работа 4</a>
+        <a href="#" class="menu__item">Лабораторная работа 5</a>
+      </div>
+    </nav>
+
+    <section class="l-1">
+      <div class="window__wrapper">
+        <h2 class="title">Покупка</h2>
+        <div class="window">
+          <div class="inp__wrapper">
+            <div class="price__wrapper">
+              <label for="inp-1">Цена</label>
+              <input type="text" id="inp-1" class="price-inp" oninput="this.value = this.value.replace(/\./g, ',')">
+            </div>
+            <div class="quantity-wrapper">
+              <label for="inp-2">Количество</label>
+              <input type="text" id="inp-2" class="quantity-inp" oninput="this.value = this.value.replace(/\./g, ',')">
+            </div>
           </div>
-          <div class="quantity-wrapper">
-            <label for="inp-2">Количество</label>
-            <input type="text" id="inp-2" class="quantity-inp" oninput="this.value = this.value.replace(/\./g, ',')">
+          <div class="btn__wrapper">
+            <button class="payment btn">Расчёт</button>
+            <button class="complete btn">Завершить</button>
           </div>
-        </div>
-        <div class="btn__wrapper">
-          <button class="payment btn">Расчёт</button>
-          <button class="complete btn">Завершить</button>
-        </div>
-        <div class="out__wrapper">
-          <div class="out__item"><span class="price">Цена</span><p class="price-output out"></p></div>
-          <div class="out__item"><span class="quantity">Количество</span><p class="quantity-out put out"></p></div>
-          <div class="out__item"><span class="sum">Сумма</span><p class="sum-output out"></p></div>
+          <div class="out__wrapper">
+            <div class="out__item"><span class="price">Цена</span>
+              <p class="price-output out"></p>
+            </div>
+            <div class="out__item"><span class="quantity">Количество</span>
+              <p class="quantity-out put out"></p>
+            </div>
+            <div class="out__item"><span class="sum">Сумма</span>
+              <p class="sum-output out"></p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+    <section class="l-3">
+      <div class="game">
+        
+      </div>
+    </section>
   </div>
 
 

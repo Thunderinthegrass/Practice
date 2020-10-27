@@ -14,11 +14,35 @@
 }
 body{
   font-family: "Fira Sans", sans-serif;
-  color: #4b0981;
+  color: #4b0981d8;
   font-weight: bold;
 }
 .container{
   width: 100%;
+}
+.menu{
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  &__item{
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    color: #2b303a9e;
+    font-size: 23px;
+    
+  }
+}
+.l-1{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.l-3{
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -27,7 +51,7 @@ body{
 .window__wrapper{
   width: 500px;
   height: 300px;
-  background: #3c0870;
+  background: #3c0870e0;
   border: 1px solid #44071f;
   border-radius: 3px;
 }
@@ -68,7 +92,7 @@ body{
   transition: .4s;
   outline: none;
   border: none;
-  background: #3c0870;
+  background: #3c0870d8;
   color: #ffffff;
   cursor: pointer;
   &:hover{
@@ -107,4 +131,24 @@ span{
   border: 1px solid #4b0981;
   border-radius: 3px;
 }
-
+// l-3-------------------------------------------------------------
+.game{
+  width: 300px;
+  height: 300px;
+  // background: rgb(39, 236, 227);
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #1ac5f0;
+}
+.block{
+  width: 100px;
+  height: 100px;
+  // background: rgba(233, 222, 222, 0.323);
+  border: 1px solid #1ac5f0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(70, 53, 53);
+  font-size: 80px;
+}
