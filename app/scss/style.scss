@@ -93,9 +93,13 @@ body{
     &:active{
       background: #9cf5ce;
     }
+    &:focus{
+      background: #9cf5ce;
+    }
   }
 }
-.l-1{
+.l-1,
+.l-4{
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -329,7 +333,79 @@ span{
 .l-4{
   height: 100vh;
 }
-
+.window__wrapperl4{
+  width: 500px;
+  height: 300px;
+  background: #3c0870e0;
+  border: 1px solid #44071f;
+  border-radius: 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .title-inner{
+    color: #352e2e;
+    font-size: 23px;
+    padding: 10px 10px 5px;
+  }
+}
+.img-l4{
+  width: 250px;
+  height: 130px;
+  position: absolute;
+  right: 30px;
+  top: 60px;
+  background-image: url(../img/happy-hobby-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.window-l4{
+  margin-top: 12px;
+  height: 255px;
+  width: 465px;
+  background: rgb(255, 255, 255);
+  label{
+    display: inline-block;
+    padding: 5px 0 5px 10px;
+  }
+  .inp-l4{
+    margin-left: 3px;
+  }
+}
+.btn-l4{
+  width: 100px;
+  padding: 5px 0;
+  margin: 10px 5px 10px 20px;
+  border-radius: 4px;
+  transition: .4s;
+  outline: none;
+  border: none;
+  background: #e61cbad8;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  &:hover{
+    background: #12e4d9;
+    color: #e9e1ed;
+  }
+  &:active{
+    background: rgb(224, 11, 11);
+  }
+}
+.descr{
+  display: inline-block;
+}
+.price-l4,
+.price-dop-l4{
+width: 100px;
+height: 20px;
+display: inline-block;
+}
 
 // l-5-------------------------------------
 .l-5{

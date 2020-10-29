@@ -219,11 +219,36 @@ window.onload = function () {
   }
 
 
-  // let closeBtn = document.querySelector('.close-btn').onclick = function () {
-  //   gameWindow.classList.toggle('d-none');
-  // }
+  let closeBtn = document.querySelector('.close-btn').onclick = function () {
+    gameWindow.classList.toggle('d-none');
+  }
 
 
+}
+
+// l-4----------------------------------
+let priceL4 = document.querySelector('.price-l4');
+let priceDop = document.querySelector('.price-dop-l4');
+let inpL4 = document.querySelectorAll('.inp-l4');
+
+let btnL4 = document.querySelector('.btn-l4').onclick = function() {
+
+  priceL4.innerHTML = 431 + ' ' + 500 + ',00 р.'
+  let sum = 0;
+
+    if (inpL4[0].checked) {
+      sum += 4500;
+    }
+    if (inpL4[1].checked) {
+      sum += 12000;
+    }
+    if (inpL4[2].checked) {
+      sum += 12000;
+    }
+    if (inpL4[3].checked) {
+      sum += 1200;
+    }
+  priceDop.innerHTML = sum + ',00 р.';
 }
 
 
