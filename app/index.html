@@ -4,22 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Практика</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+  <a href="#" class="btn-totop">
+    <span>наверх</span>
+  </a href="#">
+
   <div class="container">
     <nav class="menu">
       <div class="menu__inner">
-        <a href="#" class="menu__item">Лабораторные работы 1-2</a>
-        <a href="#" class="menu__item">Лабораторная работа 3</a>
-        <a href="#" class="menu__item">Лабораторная работа 4</a>
-        <a href="#" class="menu__item">Лабораторная работа 5</a>
+        <a href="#l1-2" class="menu__item">Лабораторные работы 1-2</a>
+        <a href="#l3" class="menu__item">Лабораторная работа 3</a>
+        <a href="#l4" class="menu__item">Лабораторная работа 4</a>
+        <a href="#l5" class="menu__item">Лабораторная работа 5</a>
+        <a href="#l6" class="menu__item">Лабораторная работа 6</a>
       </div>
     </nav>
 
-    <section class="l-1">
+    <section class="l-1" id="l1-2">
       <div class="window__wrapper">
         <h2 class="title">Покупка</h2>
         <div class="window">
@@ -51,10 +56,43 @@
         </div>
       </div>
     </section>
-    <section class="l-3">
-      <div class="game">
-        
+    <section class="l-3" id="l3">
+      <div class="game-window">
+        <button class="close-btn">
+          X
+        </button>
+        <div class="game-window__title">
+          Игра "Крестики-нолики"
+        </div>
+        <button class="start">
+          Начать игру
+        </button>
       </div>
+
+      <div class="game d-none">
+        <div class="players-turn">
+          Ходит игрок О
+        </div>
+        <div class="game-inner-1">
+          <div class="game-inner-1__title">
+            О - игрок
+          </div>
+        </div>
+        <div class="game-inner-2">
+          <div class="game-inner-2__title">
+            Х - игрок
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="l-4" id="l4">
+
+    </section>
+    <section class="l-5" id="l5">
+
+    </section>
+    <section class="l-6" id="l6">
+
     </section>
   </div>
 

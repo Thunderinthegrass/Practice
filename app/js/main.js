@@ -14,11 +14,11 @@ let payment = document.querySelector('.payment').onclick = function () {
   let a = inp[0].value;
   let b = inp[1].value;
 
-  
+
   // if (a.value == 8) {
   //   alert('Используйте запятую вместо точки');
   // }
-  
+
   if (a == '' && b == '') {
     alert('Введите цену и количество');
   }
@@ -35,46 +35,230 @@ let payment = document.querySelector('.payment').onclick = function () {
     c = Math.floor(c * 100) / 100;
 
     a = String(a);
-    a = a.replace(".",",");
+    a = a.replace(".", ",");
 
     b = String(b);
-    b = b.replace(".",",");
+    b = b.replace(".", ",");
 
     c = String(c);
-    c = c.replace(".",",");
+    c = c.replace(".", ",");
 
-    p[0].innerHTML = a;
+    p[0].innerHTML = a + 'руб.';
     p[1].innerHTML = b;
-    p[2].innerHTML = c;
+    p[2].innerHTML = c + 'руб.';
   }
 }
 
 
 // l-3------------------------------------------------------
-window.onload = function() {
-  let game = document.querySelector('.game');
+window.onload = function () {
 
-  for (let k = 0; k < 9; k++) {
-    game.innerHTML += '<div class="block"></div>';
+  let gameWindow = document.querySelector('.game-window');
+  let start = document.querySelector('.start');
+  let game = document.querySelector('.game');
+  let gameInner = document.querySelector('.game-inner-1');
+  let gameInner2 = document.querySelector('.game-inner-2');
+
+  start.onclick = function () {
+    gameWindow.classList.toggle('d-none');
+    game.classList.remove('d-none');
+    game.classList.add('d-vis');
   }
 
-  let move = 0;
+  for (let k = 0; k < 9; k++) {
+    gameInner.innerHTML += '<div class="block"></div>';
+    gameInner2.innerHTML += '<div class="block-x"></div>';
+  }
 
-  game.onclick = function(event) {
+  let div0 = document.querySelectorAll('.block');
+  let divX = document.querySelectorAll('.block-x');
+
+  function checkWin() {
+    for (let k = 0; k < div0.length; k++) {
+
+      if (div0[k].innerHTML == 'o') {
+        divX[k].innerHTML = 'o';
+      }
+      if (divX[k].innerHTML == 'x') {
+        div0[k].innerHTML = 'x';
+      }
+
+      if(div0[0].innerHTML == 'o' && div0[1].innerHTML == 'o' && div0[2].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[0].classList.add('win-bg');
+        div0[1].classList.add('win-bg');
+        div0[2].classList.add('win-bg');
+      }
+      if(div0[3].innerHTML == 'o' && div0[4].innerHTML == 'o' && div0[5].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[3].classList.add('win-bg');
+        div0[4].classList.add('win-bg');
+        div0[5].classList.add('win-bg');
+      }
+      if(div0[6].innerHTML == 'o' && div0[7].innerHTML == 'o' && div0[8].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[6].classList.add('win-bg');
+        div0[7].classList.add('win-bg');
+        div0[8].classList.add('win-bg');
+      }
+      if(div0[0].innerHTML == 'o' && div0[3].innerHTML == 'o' && div0[6].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[0].classList.add('win-bg');
+        div0[3].classList.add('win-bg');
+        div0[6].classList.add('win-bg');
+      }
+      if(div0[1].innerHTML == 'o' && div0[4].innerHTML == 'o' && div0[7].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[1].classList.add('win-bg');
+        div0[4].classList.add('win-bg');
+        div0[7].classList.add('win-bg');
+      }
+      if(div0[2].innerHTML == 'o' && div0[5].innerHTML == 'o' && div0[8].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[2].classList.add('win-bg');
+        div0[5].classList.add('win-bg');
+        div0[8].classList.add('win-bg');
+      }
+      if(div0[0].innerHTML == 'o' && div0[4].innerHTML == 'o' && div0[8].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[0].classList.add('win-bg');
+        div0[4].classList.add('win-bg');
+        div0[8].classList.add('win-bg');
+      }
+      if(div0[2].innerHTML == 'o' && div0[4].innerHTML == 'o' && div0[6].innerHTML == 'o') {
+        playersTurn.innerHTML = 'Выиграл игрок О';
+        div0[2].classList.add('win-bgX');
+        div0[4].classList.add('win-bgX');
+        div0[6].classList.add('win-bgX');
+      }
+
+      if(divX[0].innerHTML == 'x' && divX[1].innerHTML == 'x' && divX[2].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[0].classList.add('win-bgX');
+        divX[1].classList.add('win-bgX');
+        divX[2].classList.add('win-bgX');
+      }
+      if(divX[3].innerHTML == 'x' && divX[4].innerHTML == 'x' && divX[5].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[3].classList.add('win-bgX');
+        divX[4].classList.add('win-bgX');
+        divX[5].classList.add('win-bgX');
+      }
+      if(divX[6].innerHTML == 'x' && divX[7].innerHTML == 'x' && divX[8].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[6].classList.add('win-bgX');
+        divX[7].classList.add('win-bgX');
+        divX[8].classList.add('win-bgX');
+      }
+      if(divX[0].innerHTML == 'x' && divX[3].innerHTML == 'x' && divX[6].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[0].classList.add('win-bgX');
+        divX[3].classList.add('win-bgX');
+        divX[6].classList.add('win-bgX');
+      }
+      if(divX[1].innerHTML == 'x' && divX[4].innerHTML == 'x' && divX[7].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[1].classList.add('win-bgX');
+        divX[4].classList.add('win-bgX');
+        divX[7].classList.add('win-bgX');
+      }
+      if(divX[2].innerHTML == 'x' && divX[5].innerHTML == 'x' && divX[8].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[2].classList.add('win-bgX');
+        divX[5].classList.add('win-bgX');
+        divX[8].classList.add('win-bgX');
+      }
+      if(divX[0].innerHTML == 'x' && divX[4].innerHTML == 'x' && divX[8].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[0].classList.add('win-bgX');
+        divX[4].classList.add('win-bgX');
+        divX[8].classList.add('win-bgX');
+      }
+      if(divX[2].innerHTML == 'x' && divX[4].innerHTML == 'x' && divX[6].innerHTML == 'x') {
+        playersTurn.innerHTML = 'Выиграл игрок X';
+        divX[2].classList.add('win-bgX');
+        divX[4].classList.add('win-bgX');
+        divX[6].classList.add('win-bgX');
+      }
+    }
+  }
+
+
+
+  let move = 0;
+  let playersTurn = document.querySelector('.players-turn');
+
+  game.onclick = function (event) {
     console.log(event);
     if (event.target.className == 'block') {
-      if (move % 2 == 0) {
+      if (move % 2 == 0 && event.target.innerHTML == '') {
         event.target.innerHTML = 'o';
+        playersTurn.innerHTML = 'Ходит игрок Х';
+        playersTurn.classList.add('players-turn-title-color');
       }
-      else {
+      else if (move % 2 != 0 && event.target.innerHTML == '') {
+        event.target.innerHTML = '';
+      }
+      move++;
+
+      checkWin();
+    }
+
+    if (event.target.className == 'block-x') {
+      if (move % 2 == 0 && event.target.innerHTML == '') {
+        event.target.innerHTML = '';
+      }
+      else if (move % 2 != 0 && event.target.innerHTML == '') {
         event.target.innerHTML = 'x';
+        playersTurn.innerHTML = 'Ходит игрок О';
+        playersTurn.classList.remove('players-turn-title-color');
       }
       move++;
       checkWin();
     }
   }
 
-  
+
+  // let closeBtn = document.querySelector('.close-btn').onclick = function () {
+  //   gameWindow.classList.toggle('d-none');
+  // }
+
 
 }
 
+
+// Плавный скролл------------------
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault();
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    })
+  })
+}
+
+
+// back-to-top--------------------------------------------
+function btnToTop() {
+  let button = $('.btn-totop');
+
+  $(window).on('scroll', () => {
+    if ($(this).scrollTop() >= 100) {
+      button.fadeIn();
+    }
+    else {
+      button.fadeOut();
+    }
+  });
+
+  button.on('click', (e) => {
+    e.preventDefault();
+    $('html').animate({scrollTop: 0}, 500);
+  })
+}
+
+btnToTop();

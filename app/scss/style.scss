@@ -8,6 +8,53 @@
 
 @import "media";
 
+.btn-totop {
+  position: fixed;
+  display: inline-block;
+  right: 90px;
+  bottom: 70px;
+  background: #0dee85;
+  border-radius: 2px;
+  z-index: 5;
+  font-size: 20px;
+  transition: 0.5s;
+  color: #9e1515;
+  display: none;
+  span{
+    display: inline-block;
+    border: 2px solid #119bf1;
+    border-radius: 3px;
+    padding: 5px;
+  }
+  ::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    z-index: -4;
+  }
+  &:hover {
+    transform: translateX(-10px);
+    border-top: none;
+    span{
+      border: none;
+    }
+    ::before {
+      height: 55px;
+      width: 55px;
+      top: -30px;
+      left: 11px;
+      transform: rotate(45deg);
+      border-left: 3px solid #8abe29;
+      border-top: 3px solid #8f10a0;
+    }
+  }
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -27,13 +74,25 @@ body{
   top: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.74);
+  z-index: 2;
   &__item{
     display: inline-block;
     padding: 5px;
     text-decoration: none;
     color: #2b303a9e;
-    font-size: 23px;
-    
+    font-size: 20px;
+    border: 1px solid #9cf5ce;
+    border-radius: 3px;
+    transition: .5s;
+    &:hover{
+      color: #000;
+      border: 1px solid #05ec88;
+    }
+    &:active{
+      background: #9cf5ce;
+    }
   }
 }
 .l-1{
@@ -132,13 +191,105 @@ span{
   border-radius: 3px;
 }
 // l-3-------------------------------------------------------------
+.d-none{
+  display: none;
+}
+// .d-flex{
+//   display: flex;
+//   width: 300px;
+//   height: 300px;
+//   background: rgb(39, 236, 227);
+//   border: 1px solid #1ac5f0;
+//   z-index: 1000;
+// }
+.d-vis{
+  display: flex;
+  justify-content: space-between;
+}
+.game-window{
+  width: 300px;
+  height:180px;
+  border: 1px solid #1ac5f0;
+  border-radius: 3px;
+  position: relative;
+  background: rgb(173, 224, 236);
+  .start{
+    border: 1px solid #1ac5f0;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #1ac5f0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    &:hover{
+      background: rgb(5, 94, 129);
+    }
+    &:active{
+      background: rgb(4, 72, 99);
+    }
+  }
+  &__title{
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-33%);
+    color:#1ac5f0;
+  }
+}
+.close-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  color: #ffffff;
+  font-weight: bold;
+  background: #d31f1f;
+  border: 1px solid #5a0505;
+}
 .game{
+  width: 650px;
+  height: 300px;
+  position: relative;
+  // background: rgb(39, 236, 227);
+  // border: 1px solid #1ac5f0;
+}
+.players-turn{
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  transform: translateX(-33%);
+  color: #1ac5f0;
+  font-size: 45px;
+  width: 100%;
+}
+.game-inner-1,
+.game-inner-2{
   width: 300px;
   height: 300px;
-  // background: rgb(39, 236, 227);
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #1ac5f0;
+  position: relative;
+}
+.game-inner-1__title,
+.game-inner-2__title{
+  position: absolute;
+  top: -28px;
+  left: 0;
+  color: #ffffff;
+  padding: 5px;
+  border-bottom: none;
+}
+.game-inner-1__title{
+  background: #1ac5f0;
+}
+.game-inner-2__title{
+  background: #ec07d9;
 }
 .block{
   width: 100px;
@@ -152,3 +303,42 @@ span{
   color: rgb(70, 53, 53);
   font-size: 80px;
 }
+.block-x{
+  width: 100px;
+  height: 100px;
+  // background: rgba(233, 222, 222, 0.323);
+  border: 1px solid #ec07d9;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(70, 53, 53);
+  font-size: 80px;
+}
+.win-bg{
+  background: hsla(199, 99%, 50%, 0.4);
+}
+.win-bgX{
+  background: hsla(305, 94%, 48%, 0.4);
+}
+.players-turn-title-color{
+  color: #ec07d9;
+}
+
+// l-4-------------------------------------
+.l-4{
+  height: 100vh;
+}
+
+
+// l-5-------------------------------------
+.l-5{
+  height: 100vh;
+}
+
+
+// l-6-------------------------------------
+.l-6{
+  height: 100vh;
+}
+
