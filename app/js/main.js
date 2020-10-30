@@ -227,6 +227,8 @@ window.onload = function () {
 }
 
 // l-4----------------------------------
+
+// Equipment
 let priceL4 = document.querySelector('.price-l4');
 let priceDop = document.querySelector('.price-dop-l4');
 let inpL4 = document.querySelectorAll('.inp-l4');
@@ -250,6 +252,52 @@ let btnL4 = document.querySelector('.btn-l4').onclick = function() {
     }
   priceDop.innerHTML = sum + ',00 р.';
 }
+
+// Photo--------------------------------------------
+let inp_l4 = document.querySelectorAll('.inp_l4');
+let sumPhot = document.querySelector('.sum-phot_'); 
+
+for (let k = 0; k < inp_l4.length; k++) {
+  inp_l4[k].onclick = function() {
+    if (inp_l4[k].checked) {
+      btn__l4.classList.add('btn-bg');
+    }
+  }
+}
+
+let btn__l4 = document.querySelector('.btn__l4');
+
+btn__l4.onclick = function() {
+  let amount = inp_l4[3].value;
+    if (inp_l4[0].checked) {
+      sumPhot.innerHTML = amount * 3.50 + ' руб.';
+    }
+    if (inp_l4[1].checked) {
+      sumPhot.innerHTML = amount * 4.50 + ' руб.';
+    }
+    if (inp_l4[2].checked) {
+      sumPhot.innerHTML = amount * 14.50 + ' руб.';
+    }
+}
+
+// жалюзи
+
+let jHeight = document.querySelector('.jalousie-height');
+let jWidth = document.querySelector('.jalousie-width');
+let btnL4J = document.querySelector('.btn__l4-j');
+let sumL4J = document.querySelector('.sum-l4-j');
+let opt = document.querySelector('#opt');
+
+btnL4J.onclick = function() {
+  let area = jHeight.value * jWidth.value / 10000;
+  let value = opt.value;
+  let valueArea = value * area;
+  sumL4J.innerHTML = 'площадь: ' + area + 'м.' + '<br>' + 'Стоимость: ' + valueArea + ' руб.';
+  
+}
+
+
+
 
 
 // Плавный скролл------------------
@@ -287,3 +335,8 @@ function btnToTop() {
 }
 
 btnToTop();
+
+
+
+
+

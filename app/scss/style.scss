@@ -104,6 +104,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .l-3{
   height: 100vh;
@@ -332,6 +333,8 @@ span{
 // l-4-------------------------------------
 .l-4{
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .window__wrapperl4{
   width: 500px;
@@ -343,6 +346,7 @@ span{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 5px;
   .title{
     position: absolute;
     left: 0;
@@ -377,7 +381,9 @@ span{
     margin-left: 3px;
   }
 }
-.btn-l4{
+.btn-l4,
+.btn__l4,
+.btn__l4-j{
   width: 100px;
   padding: 5px 0;
   margin: 10px 5px 10px 20px;
@@ -397,6 +403,12 @@ span{
     background: rgb(224, 11, 11);
   }
 }
+.btn__l4{
+  background: #e61cba56;
+}
+.btn-bg{
+  background: #e61cbad8;
+}
 .descr{
   display: inline-block;
 }
@@ -405,6 +417,11 @@ span{
 width: 100px;
 height: 20px;
 display: inline-block;
+}
+
+// жалюзи
+.j-inp{
+  
 }
 
 // l-5-------------------------------------
