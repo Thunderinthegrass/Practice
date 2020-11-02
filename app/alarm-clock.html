@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практика</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="clock-body">
+  <nav class="menu">
+    <div class="menu__inner">
+      <a href="index.html#l1-2" class="menu__item menu__item-1">Лабораторные работы 1-2</a>
+      <a href="index.html#l3" class="menu__item menu__item-2">Лабораторная работа 3</a>
+      <a href="index.html#l4" class="menu__item menu__item-3">Лабораторная работа 4</a>
+      <a href="index.html#l5" class="menu__item menu__item-4">Лабораторная работа 5</a>
+      <a href="alarm-clock.html" class="menu__item menu__item-5">Лабораторная работа 6</a>
+    </div>
+  </nav>
+
+      <body onLoad="startclock();">
+
+        <SCRIPT>
+        set = null
+        var timerID = null
+        var timerRunning = false
+        
+        function stopclock() {
+        if(timerRunning)
+        clearTimeout(timerID)
+        timerRunning = false
+        }
+        function startclock() {
+        stopclock()
+        showtime()
+        }
+        function showtime(){
+        var now = new Date()
+        var hours = now.getHours()
+        var minutes = now.getMinutes()
+        var seconds = now.getSeconds()
+        var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+        timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+        timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+        timeValue += (hours >= 12) ? " PM" : " AM"
+        document.alert.time.value = timeValue
+        if(timeValue == set){
+        alert(message);
+        }
+        timerID = setTimeout("showtime()",1000)
+        timerRunning = true
+        }
+        function setalert() {
+        set = prompt("Установка времени напоминания.\nВведите время в формате 0:00:00. Например 11:01:00 AM","");
+        document.alert.set.value = set
+        if (document.alert.message.value == "None"){
+        setmess();
+        }
+        if (document.alert.message.value == "null"){
+        setmess();
+        }
+        }
+        function setmess() {
+        
+        message = prompt("Установка сообщения для напоминания.\nВведите свое сообщение.","");
+        document.alert.message.value = message
+        }
+        function quit() {
+        if(confirm("Сбросить все установки?")) {
+        close()
+        }
+        }
+        </SCRIPT>
+        </font>
+        <CENTER>
+        <FORM NAME="alert">
+        <TABLE bgcolor="#808080" border="2">
+        <TR><TD><font size="3" color="#FFFFFF"><b>Текущее время:</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="time" VALUE="00:00 ?M" SIZE=10></b>
+        </font>
+        </TD></TR>
+        <TR><TD><font size="3" color="#FFFFFF"><b>Напомнить в:&nbsp;</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="set" VALUE="00:00 ?M" SIZE=10></b>
+        </font>
+        </TD></TR>
+        <TR><TD><font size="3" color="#FFFFFF"><b>Сообщение:</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="message" VALUE="None" SIZE=30></b>
+        </font>
+        </TD></TR>
+        <TR><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=BUTTON STYLE="WIDTH:140" VALUE="Установить время" ONCLICK="setalert()"></b>
+        </font>
+        </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=BUTTON STYLE="WIDTH:120" VALUE="Текст ообщения" ONCLICK="setmess()"></b></font><font size="3" color="#FFFFFF"><b>
+        <INPUT TYPE=BUTTON STYLE="WIDTH:100" VALUE="Сбросить все" ONCLICK="quit()"></b>
+        </font>
+        </TD></TR>
+        </TABLE>
+        </FORM>
+        </center>
+    </section>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

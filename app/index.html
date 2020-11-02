@@ -16,11 +16,11 @@
   <div class="container">
     <nav class="menu">
       <div class="menu__inner">
-        <a href="#l1-2" class="menu__item">Лабораторные работы 1-2</a>
-        <a href="#l3" class="menu__item">Лабораторная работа 3</a>
-        <a href="#l4" class="menu__item">Лабораторная работа 4</a>
-        <a href="#l5" class="menu__item">Лабораторная работа 5</a>
-        <a href="#l6" class="menu__item">Лабораторная работа 6</a>
+        <a href="#l1-2" class="menu__item menu__item-1">Лабораторные работы 1-2</a>
+        <a href="#l3" class="menu__item menu__item-2">Лабораторная работа 3</a>
+        <a href="#l4" class="menu__item menu__item-3">Лабораторная работа 4</a>
+        <a href="#l5" class="menu__item menu__item-4">Лабораторная работа 5</a>
+        <a href="alarm-clock.html" class="menu__item menu__item-5">Лабораторная работа 6</a>
       </div>
     </nav>
 
@@ -119,7 +119,7 @@
           <label for="inp_">10 Х 15</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
           <label for="inp_">18 Х 24</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
           <label for="inp_">Количество:</label><input type="text" id="inp_" class="inp_l4" name="format"><br>
-          
+
           <div class="btn__l4">Ok</div>
           <p class="sum-l4">Сумма:</p>
           <div class="sum-phot_">
@@ -130,25 +130,163 @@
       <div class="window__wrapperl4">
         <h2 class="title">Жалюзи</h2>
         <div class="window-l4">
-          <div class="j-inp"><label for="jalousie-height">Высота</label><input type="text" class="jalousie-height" id="jalousie-height"></div>
-          <div class="j-inp"><label for="jalousie-width">Ширина</label><input type="text" class="jalousie-width" id="jalousie-width"></div>
+          <div class="j-inp"><label for="jalousie-height">Высота</label><input type="text" class="jalousie-height"
+              id="jalousie-height"></div>
+          <div class="j-inp"><label for="jalousie-width">Ширина</label><input type="text" class="jalousie-width"
+              id="jalousie-width"></div>
           <label for="opt">Материалы:</label>
           <select name="" id="opt">
             <option value="700">алюминий</option>
             <option value="450">пластик</option>
             <option value="300">текстиль</option>
           </select>
-          
+
           <div class="btn__l4-j">Ok</div>
           <p class="sum-l4-j">Сумма:</p>
         </div>
       </div>
     </section>
-    <section class="l-5" id="l5">
 
+    <section class="l-5" id="l5">
+      <div class="window__wrapperl4">
+        <h2 class="title">Вылюты стран мира</h2>
+        <div class="window-l5">
+          <div class="countries-wrapper">
+            <div class="subtitle">Страна</div>
+            <div class="countries">
+              <label for="countries-item-1" class="countries-label label-1">Гондурас</label>
+              <label for="countries-item-2" class="countries-label label-2">Мадагаскар</label>
+              <label for="countries-item-3" class="countries-label label-3">Папуа - Новая Гвинея</label>
+              <input type="radio" name="countries-item" id="countries-item-1" class="countries-item">
+              <input type="radio" name="countries-item" id="countries-item-2" class="countries-item">
+              <input type="radio" name="countries-item" id="countries-item-3" class="countries-item">
+            </div>
+          </div>
+
+          <div class="result"></div>
+
+          <div class="currensy-wrapper">
+            <div class="subtitle">Валюта</div>
+            <div class="currency">
+              <label for="currency-item-1" class="currency-label currency-label-1">ариари</label>
+              <label for="currency-item-2" class="currency-label currency-label-2">бат</label>
+              <label for="currency-item-3" class="currency-label currency-label-3">бырр</label>
+              <label for="currency-item-4" class="currency-label currency-label-4">квача</label>
+              <label for="currency-item-5" class="currency-label currency-label-5">кина</label>
+              <label for="currency-item-6" class="currency-label currency-label-6">лемпира</label>
+              <label for="currency-item-7" class="currency-label currency-label-7">нгултрум</label>
+              <label for="currency-item-8" class="currency-label currency-label-8">ринктит</label>
+              <input type="radio" name="currency-item" id="currency-item-1" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-2" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-3" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-4" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-5" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-6" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-7" class="currency-item">
+              <input type="radio" name="currency-item" id="currency-item-8" class="currency-item">
+            </div>
+          </div>
+          <div class="prompt d-none">
+            <img src="img/prompt.jpg" alt="Подсказка" title="Подсказка">
+          </div>
+          <div class="btn__l5">Проверить</div>
+
+        </div>
+      </div>
     </section>
     <section class="l-6" id="l6">
+      
+      <body onLoad="startclock();">
 
+
+
+
+
+
+        <SCRIPT NAME="Alert Script" LANGUAGE="JavaScript">
+        // AUTHOR Evan Zaker
+        set = null
+        var timerID = null
+        var timerRunning = false
+        
+        function stopclock() {
+        if(timerRunning)
+        clearTimeout(timerID)
+        timerRunning = false
+        }
+        function startclock() {
+        stopclock()
+        showtime()
+        }
+        function showtime(){
+        var now = new Date()
+        var hours = now.getHours()
+        var minutes = now.getMinutes()
+        var seconds = now.getSeconds()
+        var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+        timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+        timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+        timeValue += (hours >= 12) ? " PM" : " AM"
+        document.alert.time.value = timeValue
+        if(timeValue == set){
+        alert(message);
+        }
+        timerID = setTimeout("showtime()",1000)
+        timerRunning = true
+        }
+        function setalert() {
+        set = prompt("Установка времени напоминания.\nВведите время в формате 0:00:00. Например 11:01:00 AM","");
+        document.alert.set.value = set
+        if (document.alert.message.value == "None"){
+        setmess();
+        }
+        if (document.alert.message.value == "null"){
+        setmess();
+        }
+        }
+        function setmess() {
+        
+        message = prompt("Установка сообщения для напоминания.\nВведите свое сообщение.","");
+        document.alert.message.value = message
+        }
+        function quit() {
+        if(confirm("Сбросить все установки?")) {
+        close()
+        }
+        }
+        </SCRIPT>
+        </font>
+        <CENTER>
+        <FORM NAME="alert">
+        <TABLE bgcolor="#808080" border="2">
+        <TR><TD><font size="3" color="#FFFFFF"><b>Текущее время:</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="time" VALUE="00:00 ?M" SIZE=10></b>
+        </font>
+        </TD></TR>
+        <TR><TD><font size="3" color="#FFFFFF"><b>Напомнить в:&nbsp;</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="set" VALUE="00:00 ?M" SIZE=10></b>
+        </font>
+        </TD></TR>
+        <TR><TD><font size="3" color="#FFFFFF"><b>Сообщение:</b></font> </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=TEXT NAME="message" VALUE="None" SIZE=30></b>
+        </font>
+        </TD></TR>
+        <TR><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=BUTTON STYLE="WIDTH:140" VALUE="Установить время" ONCLICK="setalert()"></b>
+        </font>
+        </TD><TD>
+        <font size="3" color="#FFFFFF">
+        <b><INPUT TYPE=BUTTON STYLE="WIDTH:120" VALUE="Текст ообщения" ONCLICK="setmess()"></b></font><font size="3" color="#FFFFFF"><b>
+        <INPUT TYPE=BUTTON STYLE="WIDTH:100" VALUE="Сбросить все" ONCLICK="quit()"></b>
+        </font>
+        </TD></TR>
+        </TABLE>
+        </FORM>
+        </center>
     </section>
   </div>
 

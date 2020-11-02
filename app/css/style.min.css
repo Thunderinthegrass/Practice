@@ -966,8 +966,16 @@ body {
   font-weight: bold;
 }
 
+.clock-body {
+  padding: 50px 0;
+}
+
 .container {
   width: 100%;
+}
+
+.l-1, .l-3, .l-4, .l-5, .l-6 {
+  border-bottom: 1px solid #bf0aec;
 }
 
 .menu {
@@ -995,22 +1003,14 @@ body {
   font-size: 20px;
   border: 1px solid #9cf5ce;
   border-radius: 3px;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu__item:hover {
   color: #000;
   border: 1px solid #05ec88;
-}
-
-.menu__item:active {
-  background: #9cf5ce;
-}
-
-.menu__item:focus {
-  background: #9cf5ce;
 }
 
 .l-1,
@@ -1073,7 +1073,8 @@ body {
   border: 1px solid #4b0981;
 }
 
-.price__wrapper, .quantity__wrapper {
+.price__wrapper,
+.quantity__wrapper {
   padding: 10px 0;
 }
 
@@ -1094,9 +1095,9 @@ body {
   padding: 5px 0;
   margin: 0 5px;
   border-radius: 4px;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   outline: none;
   border: none;
   background: #3c0870d8;
@@ -1191,9 +1192,9 @@ span {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .game-window .start:hover {
@@ -1395,14 +1396,15 @@ span {
 
 .btn-l4,
 .btn__l4,
+.btn__l5,
 .btn__l4-j {
   width: 100px;
   padding: 5px 0;
   margin: 10px 5px 10px 20px;
   border-radius: 4px;
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   outline: none;
   border: none;
   background: #e61cbad8;
@@ -1413,6 +1415,7 @@ span {
 
 .btn-l4:hover,
 .btn__l4:hover,
+.btn__l5:hover,
 .btn__l4-j:hover {
   background: #12e4d9;
   color: #e9e1ed;
@@ -1420,6 +1423,7 @@ span {
 
 .btn-l4:active,
 .btn__l4:active,
+.btn__l5:active,
 .btn__l4-j:active {
   background: #e00b0b;
 }
@@ -1445,6 +1449,187 @@ span {
 
 .l-5 {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.window-l5 {
+  margin-top: 12px;
+  height: 255px;
+  width: 465px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.countries-wrapper {
+  margin-left: 20px;
+  position: relative;
+}
+
+.subtitle {
+  margin: 5px;
+}
+
+.countries {
+  width: 200px;
+  border: 1px solid #11e0ad;
+  position: relative;
+}
+
+.countries-item {
+  font-weight: 400;
+  -webkit-appearance: none;
+  width: 200px;
+  height: 19px;
+  border: none;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.countries-item:hover {
+  background: #1ce2e9;
+}
+
+.countries-item:active {
+  border: none;
+}
+
+.countries-item:focus {
+  border: none;
+}
+
+.countries-label {
+  position: absolute;
+  font-weight: normal;
+}
+
+.label-1 {
+  left: 0;
+  top: 0;
+}
+
+.label-2 {
+  left: 0;
+  top: 23px;
+}
+
+.label-3 {
+  left: 0;
+  top: 46px;
+}
+
+.currency {
+  width: 150px;
+  border: 1px solid #11e0ad;
+  margin-right: 20px;
+  position: relative;
+}
+
+.currency-item {
+  font-weight: 400;
+  -webkit-appearance: none;
+  width: 150px;
+  height: 19px;
+  border: none;
+  z-index: 10;
+  outline: none;
+  cursor: pointer;
+}
+
+.currency-item:hover {
+  background: #1ce2e9;
+}
+
+.currency-label {
+  position: absolute;
+  font-weight: normal;
+}
+
+.currency-label-1 {
+  left: 0;
+  top: 0;
+}
+
+.currency-label-2 {
+  left: 0;
+  top: 25px;
+}
+
+.currency-label-3 {
+  left: 0;
+  top: 48px;
+}
+
+.currency-label-4 {
+  left: 0;
+  top: 70px;
+}
+
+.currency-label-5 {
+  left: 0;
+  top: 93px;
+}
+
+.currency-label-6 {
+  left: 0;
+  top: 115px;
+}
+
+.currency-label-7 {
+  left: 0;
+  top: 138px;
+}
+
+.currency-label-8 {
+  left: 0;
+  top: 160px;
+}
+
+.prompt {
+  position: absolute;
+  left: 50px;
+  bottom: 30px;
+  border: 2px solid #ffe600;
+}
+
+.prompt img {
+  width: 50px;
+  height: 50px;
+}
+
+.result {
+  width: 180px;
+  height: 40px;
+  position: absolute;
+  left: 110px;
+  bottom: 85px;
+  border: 1px solid #11e0ad;
+  text-align: center;
+  padding: 5px;
+  font-weight: normal;
+}
+
+.btn__l5 {
+  position: absolute;
+  left: 130px;
+  bottom: 30px;
+}
+
+.active {
+  background: #1ce2e9;
 }
 
 .l-6 {
