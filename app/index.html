@@ -16,15 +16,23 @@
   <div class="container">
     <nav class="menu">
       <div class="menu__inner">
-        <a href="#l1-2" class="menu__item menu__item-1">Лабораторные работы 1-2</a>
-        <a href="#l3" class="menu__item menu__item-2">Лабораторная работа 3</a>
-        <a href="#l4" class="menu__item menu__item-3">Лабораторная работа 4</a>
-        <a href="#l5" class="menu__item menu__item-4">Лабораторная работа 5</a>
-        <a href="alarm-clock.html" class="menu__item menu__item-5">Лабораторная работа 6</a>
+        <a href="#l1-2" class="menu__item menu__item-1">Задание 1</a>
+        <a href="#l3" class="menu__item menu__item-2">Задание 2</a>
+        <a href="#l4" class="menu__item menu__item-3">Задания 3, 4, 5</a>
+        <a href="#l5" class="menu__item menu__item-4">Задание 6</a>
+        <a href="alarm-clock.html" class="menu__item menu__item-5">Задания 7, 8, 9</a>
       </div>
     </nav>
 
     <section class="l-1" id="l1-2">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 1
+        </div>
+        <div class="descr-text">
+          Программа расчета стоимости покупки, состоящей из нескольких одинаковых предметов.
+        </div>
+      </div>
       <div class="window__wrapper">
         <h2 class="title">Покупка</h2>
         <div class="window">
@@ -57,6 +65,14 @@
       </div>
     </section>
     <section class="l-3" id="l3">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 2
+        </div>
+        <div class="descr-text">
+          Игра крестики-нолики.Приложение состоит из трех окон – главного окна, окна для игрока, играющего «крестиками», и окна для игрока, играющего «ноликами». Такой интерфейс называется многооконным.
+        </div>
+      </div>
       <div class="game-window">
         <button class="close-btn">
           X
@@ -85,69 +101,111 @@
         </div>
       </div>
     </section>
+
     <section class="l-4" id="l4">
-      <div class="window__wrapperl4">
-        <h2 class="title">Комплектация</h2>
-        <div class="window-l4">
-          <div class="title-inner">
-            Chevrolet Lasetti
-          </div>
-          <div class="img-l4">
 
+      <div class="l-4-item">
+        <div class="descr">
+          <div class="descr-title">
+            Задание 3
           </div>
-          <label for="inp__1">Защита картера</label><input type="checkbox" id="inp__1" class="inp-l4"><br>
-          <label for="inp__2">Легкосплавные диски</label><input type="checkbox" id="inp__2" class="inp-l4"><br>
-          <label for="inp__3">Шипованные шины</label><input type="checkbox" id="inp__3" class="inp-l4"><br>
-          <label for="inp__4">Коврики</label><input type="checkbox" id="inp__4" class="inp-l4"><br>
-          <div class="btn-l4">Ok</div>
-          <p class="descr">Цена в выбранной комплектации:</p>
-          <div class="price-l4">
+          <div class="descr-text">
+            Программа, рассчитывающая стоимость доп. оборудования с помощью переключателей.
           </div>
-          <p class="descr">В том числе доп. оборудования:</p>
-          <div class="price-dop-l4">
+        </div>
+        <div class="window__wrapperl4">
+          <h2 class="title">Комплектация</h2>
+          <div class="window-l4">
+            <div class="title-inner">
+              Chevrolet Lasetti
+            </div>
+            <div class="img-l4">
+  
+            </div>
+            <label for="inp__1">Защита картера</label><input type="checkbox" id="inp__1" class="inp-l4"><br>
+            <label for="inp__2">Легкосплавные диски</label><input type="checkbox" id="inp__2" class="inp-l4"><br>
+            <label for="inp__3">Шипованные шины</label><input type="checkbox" id="inp__3" class="inp-l4"><br>
+            <label for="inp__4">Коврики</label><input type="checkbox" id="inp__4" class="inp-l4"><br>
+            <div class="btn-l4">Ok</div>
+            <p class="descr">Цена в выбранной комплектации:</p>
+            <div class="price-l4">
+            </div>
+            <p class="descr">В том числе доп. оборудования:</p>
+            <div class="price-dop-l4">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="window__wrapperl4">
-        <h2 class="title">Фото</h2>
-        <div class="window-l4">
-          <div class="title-inner">
-            Формат
+      <div class="l-4-item">
+        <div class="descr">
+          <div class="descr-title">
+            Задание 4
           </div>
-          <label for="inp_">9 Х 12</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
-          <label for="inp_">10 Х 15</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
-          <label for="inp_">18 Х 24</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
-          <label for="inp_">Количество:</label><input type="text" id="inp_" class="inp_l4" name="format"><br>
-
-          <div class="btn__l4">Ok</div>
-          <p class="sum-l4">Сумма:</p>
-          <div class="sum-phot_">
+          <div class="descr-text">
+            Программа, вычисляющая стоимость фотографий в зависимости от количества и размера.
+          </div>
+        </div>
+        <div class="window__wrapperl4">
+          <h2 class="title">Фото</h2>
+          <div class="window-l4">
+            <div class="title-inner">
+              Формат
+            </div>
+            <label for="inp_">9 Х 12</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
+            <label for="inp_">10 Х 15</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
+            <label for="inp_">18 Х 24</label><input type="radio" id="inp_" class="inp_l4" name="format"><br>
+            <label for="inp_">Количество:</label><input type="text" id="inp_" class="inp_l4" name="format"><br>
+  
+            <div class="btn__l4">Ok</div>
+            <p class="sum-l4">Сумма:</p>
+            <div class="sum-phot_">
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="window__wrapperl4">
-        <h2 class="title">Жалюзи</h2>
-        <div class="window-l4">
-          <div class="j-inp"><label for="jalousie-height">Высота</label><input type="text" class="jalousie-height"
-              id="jalousie-height"></div>
-          <div class="j-inp"><label for="jalousie-width">Ширина</label><input type="text" class="jalousie-width"
-              id="jalousie-width"></div>
-          <label for="opt">Материалы:</label>
-          <select name="" id="opt">
-            <option value="700">алюминий</option>
-            <option value="450">пластик</option>
-            <option value="300">текстиль</option>
-          </select>
-
-          <div class="btn__l4-j">Ok</div>
-          <p class="sum-l4-j">Сумма:</p>
+      <div class="l-4-item">
+        <div class="descr">
+          <div class="descr-title">
+            Задание 5
+          </div>
+          <div class="descr-text">
+            Программа, рассчитывающая стоимость жалюзи в зависимости от площади и выбранных материалов.
+          </div>
+        </div>
+        <div class="window__wrapperl4">
+          <h2 class="title">Жалюзи</h2>
+          <div class="window-l4">
+            <div class="j-inp"><label for="jalousie-height">Высота</label><input type="text" class="jalousie-height"
+                id="jalousie-height"></div>
+            <div class="j-inp"><label for="jalousie-width">Ширина</label><input type="text" class="jalousie-width"
+                id="jalousie-width"></div>
+            <label for="opt">Материалы:</label>
+            <select name="" id="opt">
+              <option value="700">алюминий</option>
+              <option value="450">пластик</option>
+              <option value="300">текстиль</option>
+            </select>
+  
+            <div class="btn__l4-j">Ok</div>
+            <p class="sum-l4-j">Сумма:</p>
+          </div>
         </div>
       </div>
+
+
     </section>
 
     <section class="l-5" id="l5">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 6
+        </div>
+        <div class="descr-text">
+          Программа «Валюты стран мира», в которой требуется угадать (ответить), какая из восьми валют имеет хождение в указанных странах.
+        </div>
+      </div>
       <div class="window__wrapperl4">
         <h2 class="title">Вылюты стран мира</h2>
         <div class="window-l5">
@@ -193,7 +251,7 @@
       </div>
     </section>
     <section class="l-6" id="l6">
-      
+      <a href="alarm-clock.html" class="menu__item menu__item-5 menu__item-7-8-9">Задания 7, 8, 9</a>
     </section>
   </div>
 

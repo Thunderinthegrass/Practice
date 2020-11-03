@@ -11,83 +11,116 @@
 <body class="clock-body">
   <nav class="menu">
     <div class="menu__inner">
-      <a href="index.html#l1-2" class="menu__item menu__item-1">Лабораторные работы 1-2</a>
-      <a href="index.html#l3" class="menu__item menu__item-2">Лабораторная работа 3</a>
-      <a href="index.html#l4" class="menu__item menu__item-3">Лабораторная работа 4</a>
-      <a href="index.html#l5" class="menu__item menu__item-4">Лабораторная работа 5</a>
-      <a href="alarm-clock.html" class="menu__item menu__item-5">Лабораторная работа 6</a>
+      <a href="index.html#l1-2" class="menu__item menu__item-1"> Задание 1</a>
+      <a href="index.html#l3" class="menu__item menu__item-2">Задание 2</a>
+      <a href="index.html#l4" class="menu__item menu__item-3">Задание 3, 4, 5</a>
+      <a href="index.html#l5" class="menu__item menu__item-4">Задание 6</a>
+      <a href="alarm-clock.html" class="menu__item menu__item-5">Задания 7, 8, 9</a>
     </div>
   </nav>
-  <div class="timer-container">
-    <div class="timer-section">
-      <div class="timer-wrapper">
-        <div class="timer-inner">
-          <input type="text" name="time" id="time">
-          <button id="button" class="timer-btn">Запустить</button>
-          <div id="timer"></div>
+  <section class="task-7-8-9">
+    <div class="z-7-8-9-item">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 7
+        </div>
+        <div class="descr-text">
+          Программа «Таймер».
         </div>
       </div>
-    </div>
-  </div>
-
-  <body onLoad="startclock();">
-    <div class="alarm-section">
-      <div class="alarm-wrapper">
-        <div class="alarm-inner">
-          <form name="alert">
-            <table>
-              <tr>
-                <td>
-                  Текущее время:
-                </td>
-                <td>
-                  <input type="text" name="time" value="00:00 ?M">
-                </td>
-              </tr>
-              <tr>
-                <td>Напомнить в:&nbsp;</td>
-                <td>
-                  <input type="text" name="set" value="00:00 ?M">
-                </td>
-              </tr>
-              <tr>
-                <td>Сообщение:</td>
-                <td>
-                  <input type="text" name="message" value="None">
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <input type="button" class="alarm-btn" value="Установить время" onclick="setalert()">
-                </td>
-                <td>
-                  <input type="button" class="alarm-btn" value="Текст ообщения" onclick="setmess()">
-                  <input type="button" class="alarm-btn" value="Сбросить все" onclick="quit()">
-                </td>
-              </tr>
-            </table>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="progress-section">
-      <div class="progress-wrapper">
-        <div class="progress-inner">
-          <input type="text" class="progress-inp">
-          <progress class="user-progress" max="30" value="0">
-
-          </progress>
-          <div class="progress-btn">
-            Старт
-          </div>
-          <div class="out-progress">
-
+      <div class="timer-container">
+        <div class="timer-section">
+          <div class="timer-wrapper">
+            <div class="timer-inner">
+              <input type="text" name="time" id="time">
+              <button id="button" class="timer-btn">Запустить</button>
+              <div id="timer"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    </section>
+  
+    <div class="z-7-8-9-item">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 8
+        </div>
+        <div class="descr-text">
+          Программа «Будильник».
+        </div>
+      </div>
+      <body onLoad="startclock();">
+        <div class="alarm-section">
+          <div class="alarm-wrapper">
+            <div class="alarm-inner">
+              <form name="alert">
+                <table>
+                  <tr>
+                    <td>
+                      Текущее время:
+                    </td>
+                    <td>
+                      <input type="text" name="time" value="00:00 ?M">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Напомнить в:&nbsp;</td>
+                    <td>
+                      <input type="text" name="set" value="00:00 ?M">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Сообщение:</td>
+                    <td>
+                      <input type="text" name="message" value="None">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="button" class="alarm-btn" value="Установить время" onclick="setalert()">
+                    </td>
+                    <td>
+                      <input type="button" class="alarm-btn" value="Текст ообщения" onclick="setmess()">
+                      <input type="button" class="alarm-btn" value="Сбросить все" onclick="quit()">
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </div>
     </div>
+  
+    <div class="z-7-8-9-item">
+      <div class="descr">
+        <div class="descr-title">
+          Задание 9
+        </div>
+        <div class="descr-text">
+          Программа «Угадай число», представляющая из себя индикатор времени, оставшегося на решение поставленной задачи – угадать задуманное компьютером число.
+        </div>
+      </div>
+      <div class="progress-section">
+        <div class="progress-wrapper">
+          <div class="progress-inner">
+            <input type="text" class="progress-inp">
+            <progress class="user-progress" max="30" value="0">
+  
+            </progress>
+            <div class="progress-btn">
+              Старт
+            </div>
+            <div class="out-progress">
+  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/libs.min.js"></script>
