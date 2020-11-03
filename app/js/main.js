@@ -178,9 +178,6 @@ window.onload = function () {
       }
     }
   }
-
-
-
   let move = 0;
   let playersTurn = document.querySelector('.players-turn');
 
@@ -213,13 +210,9 @@ window.onload = function () {
       checkWin();
     }
   }
-
-
   let closeBtn = document.querySelector('.close-btn').onclick = function () {
     gameWindow.classList.toggle('d-none');
   }
-
-
 }
 
 // l-4-------------------------------------------------------------------------------
@@ -357,8 +350,6 @@ for (let p = 0; p < curren.length; p++) {
       curren[6].classList.remove('active');
       curren[7].classList.remove('active');
     }
-  
-  
     if (curren[3].checked) {
       curren[0].classList.remove('active');
       curren[1].classList.remove('active');
@@ -369,8 +360,6 @@ for (let p = 0; p < curren.length; p++) {
       curren[6].classList.remove('active');
       curren[7].classList.remove('active');
     }
-  
-  
     if (curren[4].checked) {
       curren[0].classList.remove('active');
       curren[1].classList.remove('active');
@@ -381,8 +370,6 @@ for (let p = 0; p < curren.length; p++) {
       curren[6].classList.remove('active');
       curren[7].classList.remove('active');
     }
-  
-  
     if (curren[5].checked) {
       curren[0].classList.remove('active');
       curren[1].classList.remove('active');
@@ -393,8 +380,6 @@ for (let p = 0; p < curren.length; p++) {
       curren[6].classList.remove('active');
       curren[7].classList.remove('active');
     }
-  
-  
     if (curren[6].checked) {
       curren[0].classList.remove('active');
       curren[1].classList.remove('active');
@@ -405,8 +390,6 @@ for (let p = 0; p < curren.length; p++) {
       curren[6].classList.add('active');
       curren[7].classList.remove('active');
     }
-  
-  
     if (curren[7].checked) {
       curren[0].classList.remove('active');
       curren[1].classList.remove('active');
@@ -419,23 +402,14 @@ for (let p = 0; p < curren.length; p++) {
     }
   }
 }
-
-  
-
-
 let mistake = 0;
 btn__l5.onclick = function () {
-
   if (count[0].checked && curren[5].checked) {
     result.innerHTML = 'Гондурас' + '<br>' + 'лемпира';
     result.style.fontWeight = 'bold';
     mistake = 0;
     console.log(mistake);
   }
-  // else {
-  //   mistake++;
-  //   console.log(mistake);
-  // }
   if (count[0].checked && curren[0].checked) {
     result.innerHTML = 'Гондурас' + '<br>' + 'не ариари';
   }
@@ -457,8 +431,6 @@ btn__l5.onclick = function () {
   if (count[0].checked && curren[7].checked) {
     result.innerHTML = 'Гондурас' + '<br>' + 'не ринктит';
   }
-
-
 
   if (count[1].checked && curren[0].checked) {
     result.innerHTML = 'Мадагаскар' + '<br>' + 'ариари';
@@ -487,10 +459,6 @@ btn__l5.onclick = function () {
   if (count[1].checked && curren[7].checked) {
     result.innerHTML = 'Мадагаскар' + '<br>' + 'не ринктит';
   }
-
-
-
-
   if (count[2].checked && curren[4].checked) {
     result.innerHTML = 'Папуа - Новая Гвинея' + '<br>' + 'кина';
     result.style.fontWeight = 'bold';
@@ -518,19 +486,15 @@ btn__l5.onclick = function () {
   if (count[2].checked && curren[7].checked) {
     result.innerHTML = 'Папуа - Новая Гвинея' + '<br>' + 'не ринктит';
   }
-
   else {
     mistake++;
     console.log(mistake);
   }
-
-
   if (mistake > 2) {
     promp.classList.remove('d-none');
     mistake = 0;
   }
 }
-
 promp.onclick = function () {
   result.style.fontWeight = 'bold';
   if (count[0].checked) {

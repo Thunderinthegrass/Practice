@@ -18,98 +18,81 @@
       <a href="alarm-clock.html" class="menu__item menu__item-5">Лабораторная работа 6</a>
     </div>
   </nav>
-
-      <body onLoad="startclock();">
-
-        <SCRIPT>
-        set = null
-        var timerID = null
-        var timerRunning = false
-        
-        function stopclock() {
-        if(timerRunning)
-        clearTimeout(timerID)
-        timerRunning = false
-        }
-        function startclock() {
-        stopclock()
-        showtime()
-        }
-        function showtime(){
-        var now = new Date()
-        var hours = now.getHours()
-        var minutes = now.getMinutes()
-        var seconds = now.getSeconds()
-        var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
-        timeValue += ((minutes < 10) ? ":0" : ":") + minutes
-        timeValue += ((seconds < 10) ? ":0" : ":") + seconds
-        timeValue += (hours >= 12) ? " PM" : " AM"
-        document.alert.time.value = timeValue
-        if(timeValue == set){
-        alert(message);
-        }
-        timerID = setTimeout("showtime()",1000)
-        timerRunning = true
-        }
-        function setalert() {
-        set = prompt("Установка времени напоминания.\nВведите время в формате 0:00:00. Например 11:01:00 AM","");
-        document.alert.set.value = set
-        if (document.alert.message.value == "None"){
-        setmess();
-        }
-        if (document.alert.message.value == "null"){
-        setmess();
-        }
-        }
-        function setmess() {
-        
-        message = prompt("Установка сообщения для напоминания.\nВведите свое сообщение.","");
-        document.alert.message.value = message
-        }
-        function quit() {
-        if(confirm("Сбросить все установки?")) {
-        close()
-        }
-        }
-        </SCRIPT>
-        </font>
-        <CENTER>
-        <FORM NAME="alert">
-        <TABLE bgcolor="#808080" border="2">
-        <TR><TD><font size="3" color="#FFFFFF"><b>Текущее время:</b></font> </TD><TD>
-        <font size="3" color="#FFFFFF">
-        <b><INPUT TYPE=TEXT NAME="time" VALUE="00:00 ?M" SIZE=10></b>
-        </font>
-        </TD></TR>
-        <TR><TD><font size="3" color="#FFFFFF"><b>Напомнить в:&nbsp;</b></font> </TD><TD>
-        <font size="3" color="#FFFFFF">
-        <b><INPUT TYPE=TEXT NAME="set" VALUE="00:00 ?M" SIZE=10></b>
-        </font>
-        </TD></TR>
-        <TR><TD><font size="3" color="#FFFFFF"><b>Сообщение:</b></font> </TD><TD>
-        <font size="3" color="#FFFFFF">
-        <b><INPUT TYPE=TEXT NAME="message" VALUE="None" SIZE=30></b>
-        </font>
-        </TD></TR>
-        <TR><TD>
-        <font size="3" color="#FFFFFF">
-        <b><INPUT TYPE=BUTTON STYLE="WIDTH:140" VALUE="Установить время" ONCLICK="setalert()"></b>
-        </font>
-        </TD><TD>
-        <font size="3" color="#FFFFFF">
-        <b><INPUT TYPE=BUTTON STYLE="WIDTH:120" VALUE="Текст ообщения" ONCLICK="setmess()"></b></font><font size="3" color="#FFFFFF"><b>
-        <INPUT TYPE=BUTTON STYLE="WIDTH:100" VALUE="Сбросить все" ONCLICK="quit()"></b>
-        </font>
-        </TD></TR>
-        </TABLE>
-        </FORM>
-        </center>
-    </section>
+  <div class="timer-container">
+    <div class="timer-section">
+      <div class="timer-wrapper">
+        <div class="timer-inner">
+          <input type="text" name="time" id="time">
+          <button id="button" class="timer-btn">Запустить</button>
+          <div id="timer"></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/libs.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
+  <body onLoad="startclock();">
+    <div class="alarm-section">
+      <div class="alarm-wrapper">
+        <div class="alarm-inner">
+          <form name="alert">
+            <table>
+              <tr>
+                <td>
+                  Текущее время:
+                </td>
+                <td>
+                  <input type="text" name="time" value="00:00 ?M">
+                </td>
+              </tr>
+              <tr>
+                <td>Напомнить в:&nbsp;</td>
+                <td>
+                  <input type="text" name="set" value="00:00 ?M">
+                </td>
+              </tr>
+              <tr>
+                <td>Сообщение:</td>
+                <td>
+                  <input type="text" name="message" value="None">
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="button" class="alarm-btn" value="Установить время" onclick="setalert()">
+                </td>
+                <td>
+                  <input type="button" class="alarm-btn" value="Текст ообщения" onclick="setmess()">
+                  <input type="button" class="alarm-btn" value="Сбросить все" onclick="quit()">
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="progress-section">
+      <div class="progress-wrapper">
+        <div class="progress-inner">
+          <input type="text" class="progress-inp">
+          <progress class="user-progress" max="30" value="0">
+
+          </progress>
+          <div class="progress-btn">
+            Старт
+          </div>
+          <div class="out-progress">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/alarm-clock.js"></script>
+  </body>
 
 </html>
